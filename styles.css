@@ -1,3 +1,22 @@
 body {
     background-color: deepskyblue;
 }
+
+h1 {
+    text-align: center;
+}
+
+#sprite {
+    text-align: left;
+    width: 70%;
+    height: auto;
+}
+
+.stats {
+    text-align: right;
+    font-size: large;
+}
+
+.container {
+    border: 1px solid black;
+}

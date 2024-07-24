@@ -20,7 +20,20 @@ async function getData() {
         }
         const data = await response.json();
         image.src=data.sprites.front_default;
-        pokemonName.textContent = data.name;
+        pokemonName.textContent = "Name: " + data.name;
+        pokemonId.textContent = "ID: " + data.id;
+        pokemonHeight.textContent = "Height: " + data.height;
+        pokemonWeight.textContent = "Weight: " + data.weight;
+        pokemonHp.textContent = "Hp: " + data.stats[0].base_stat;
+        pokemonTypes.textContent = "Types: ";
+        data.types.forEach(element => {
+            pokemonTypes.textContent += element.type.name + " ";
+        });
+        pokemonAttack.textContent = "Attack: " + data.stats[1].base_stat;
+        pokemonDefense.textContent = "Defense: " + data.stats[2].base_stat;
+        pokemonSpecialAttack.textContent = "Special Attack: " + data.stats[3].base_stat;
+        pokemonSpecialDefense.textContent = "Special Defense: " + data.stats[4].base_stat;
+        pokemonSpeed.textContent = "Speed: " + data.stats[5].base_stat;
         console.log(data);
     }
     catch(error) {
