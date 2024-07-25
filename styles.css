@@ -17,6 +17,38 @@ h1 {
     font-size: large;
 }
 
-.container {
+.container{
     border: 1px solid black;
+}
+
+#image {
+    text-align: left;
+    float: left;
+    border: 1px solid black;
+    width: 70%;
+    height: auto;
+    visibility: hidden;
+}
+
+hr {
+    background-color: black;
+    border: none;
+    height: 1px;
+    visibility: hidden;
+}
+
+#sprite {
+    float: left;
+}
+
+button {
+   cursor: pointer;
+   color: white;
+   background-color: red;
+   border-radius: 50px;
+   font-size: 20px;
+}
+
+label {
+    font-size: 30px;
 }

@@ -14,7 +14,8 @@ async function getData() {
         const pokemonSpeed = document.getElementById("speed");
         const image = document.getElementById("sprite");
         const searchInput = document.getElementById("search-input").value.toLowerCase();
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput}/`);
+        
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput}`);
         if (!response.ok) {
             throw new error("Could not fetch data");
         }
@@ -34,11 +35,21 @@ async function getData() {
         pokemonSpecialAttack.textContent = "Special Attack: " + data.stats[3].base_stat;
         pokemonSpecialDefense.textContent = "Special Defense: " + data.stats[4].base_stat;
         pokemonSpeed.textContent = "Speed: " + data.stats[5].base_stat;
+        
+        const border = document.getElementById("image");
+        const line = document.getElementsByClassName("lines");
+
+        border.style.visibility = "visible";
+        for(let i = 0; i < line.length; ++i) {
+            line[i].style.visibility = "visible";
+        }
         console.log(data);
+        
     }
     catch(error) {
         console.error(error);
         alert("pokemon not found, check spelling");
     }
-
 }
+
+

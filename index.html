@@ -11,22 +11,37 @@
     <body>
         <h1>Pokemon Search</h1>
         <div class="container">
-            <img id="sprite">
+            <div id="image">
+                <img id="sprite">
+            </div>
+            <div id="info">
             <p id="pokemon-name" class="stats"></p>
+            <hr class="lines">
             <p id="pokemon-id" class="stats"></p>
+            <hr class="lines">
             <p id="weight" class="stats"></p>
+            <hr class="lines">
             <p id="height" class="stats"></p>
+            <hr class="lines">
             <p id="types" class="stats"></p>
+            <hr class="lines">
             <p id="hp" class="stats"></p>
+            <hr class="lines">
             <p id="attack" class="stats"></p>
-            <p id="defense" clsss="stats"></p>
+            <hr class="lines">
+            <p id="defense" class="stats"></p>
+            <hr class="lines">
             <p id="special-attack" class="stats"></p>
+            <hr class="lines">
             <p id="special-defense" class="stats"></p>
-            <p id="speed" class="stats"></p>
+            <hr class="lines">
+            <p id="speed" class="stats"></p> 
+            </div>
+            
         </div>
-        <p>Just through the name of a pokemon, you can see it's data<p>
-        <label for="name">Please enter name of pokemon</label><br>
+        <label for="name">Please enter name of pokemon to see data</label><br>
         <input type="text" id="search-input">
+        <br><br>
         <button id="search-button" onclick="getData()">Search</button>
         <script src="script.js"></script>
     </body>
